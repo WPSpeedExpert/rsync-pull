@@ -41,7 +41,7 @@ LogFile=("${staging_scriptPath}/rsync-pull-production-to-staging.log")
 # Empty the log file
 truncate -s 0 ${LogFile}
 
-# Log the date and time "TZ=\"Europe/Amsterdam\"
+# Log the date and time
 echo "[+] NOTICE: Start script: $(date -u)" 2>&1 | tee -a ${LogFile}
 
 # Check for WP directory & wp-config.php

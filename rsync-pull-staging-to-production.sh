@@ -9,7 +9,7 @@
 # Version:            3.5
 # GitHub:             https://github.com/WPSpeedExpert/rsync-pull/
 # Make executable:    chmod +x rsync-pull-staging-to-production.sh
-# Crontab @weekly:    0 0 * * MON /home/${staging_siteUser}/rsync-pull-staging-to-production.sh 2>&1
+# Crontab @weekly:    0 0 * * MON /home/${siteUser}/rsync-pull-staging-to-production.sh 2>&1
 # =========================================================================== #
 #
 # Variables: Source | Production
@@ -41,7 +41,7 @@ LogFile=("${scriptPath}/rsync-pull-staging-to-production.log")
 # Empty the log file
 truncate -s 0 ${LogFile}
 
-# Log the date and time "TZ=\"Europe/Amsterdam\"
+# Log the date and time
 echo "[+] NOTICE: Start script: $(date -u)" 2>&1 | tee -a ${LogFile}
 
 # Check for WP directory & wp-config.php
