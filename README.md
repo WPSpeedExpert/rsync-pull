@@ -1,3 +1,9 @@
+<p align="center">
+  <a href="https://wpspeedexpert.com/" target="_blank">
+    <img src="https://wpspeedexpert.com/wp-content/uploads/2024/06/WP-Speed-Expert-grey-3.webp">
+  </a>
+</p>
+
 # rsync-pull
 Sync production and staging WordPress websites from Cloudpanel server to Cloudpanel server
 
