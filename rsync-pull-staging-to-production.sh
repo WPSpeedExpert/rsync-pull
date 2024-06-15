@@ -176,6 +176,11 @@ echo "[+] NOTICE: Synching the database: ${staging_databaseName}.sql.gz" 2>&1 | 
 # rsync -azP ${staging_scriptPath}/tmp/${staging_databaseName}.sql.gz ${scriptPath}/tmp 2>&1 | tee -a ${LogFile}
 rsync -azP ${remote_server_ssh}:${staging_scriptPath}/tmp/${staging_databaseName}.sql.gz ${scriptPath}/tmp 2>&1 | tee -a ${LogFile}
 
+# Clean up the remote database export file
+echo "[+] NOTICE: Clean up the remote database export file: ${databaseName}" 2>&1 | tee -a ${LogFile}
+# rm ${staging_scriptPath}/tmp/${staging_databaseName}.sql.gz
+ssh ${remote_server_ssh} "rm ${staging_scriptPath}/tmp/${staging_databaseName}.sql.gz" 2>&1 | tee -a ${LogFile}
+
 # Delete the production database
 # echo "[+] WARNING: Deleting the database: ${databaseName}" 2>&1 | tee -a ${LogFile}
 # clpctl db:delete --databaseName=${databaseName} --force 2>&1 | tee -a ${LogFile}
