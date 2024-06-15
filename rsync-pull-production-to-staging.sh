@@ -6,7 +6,7 @@
 # Requirements:       Cloudpanel | ssh-keygen | ssh-copy-id root@127.0.0.1 (replace IP)
 # Author:             WP Speed Expert
 # Author URI:         https://wpspeedexpert.com
-# Version:            3.5
+# Version:            3.5.1
 # GitHub:             https://github.com/WPSpeedExpert/rsync-pull/
 # Make executable:    chmod +x rsync-pull-production-to-staging.sh
 # Crontab @weekly:    0 0 * * MON /home/${staging_siteUser}/rsync-pull-production-to-staging.sh 2>&1
