@@ -12,10 +12,10 @@
 # Crontab @weekly:    0 0 * * MON /home/${siteUser}/rsync-pull-staging-to-production.sh 2>&1
 # =========================================================================== #
 #
-# Variables: Source | Production
+# Variables: Destination | Production
 domainName=("domainName.com")
 siteUser=("site-user")
-# Variables: Destination | Staging #
+# Variables: Source | Staging #
 staging_domainName=("staging.domainName.com")
 staging_siteUser=("staging_siteUser")
 #
